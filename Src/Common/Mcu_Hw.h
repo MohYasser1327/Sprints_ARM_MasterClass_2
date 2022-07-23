@@ -1,53 +1,46 @@
 /*****************************************************************
  *  FILE DISCRIPTION
  * --------------------------------------------------------------*/
-/**         \file IntCtrl.h
- *         Module: IntCtrl
+/**         \file Mcu_Hw.h
+ *         Module: Mcu Hardware
  * 
- *      Description: Header File for IntCtrl Module
+ *      Description: Includes all Registers and Its Memory Locations
  *               
  * 
  * ****************************************************************/
 
-#ifndef IntCtrl__H
-#define IntCtrl_H
+#ifndef Mcu_Hw__H
+#define Mcu_Hw_H
 /*******************************************************************
- * Includes
+ *                            Includes
  * *****************************************************************/
 #include "Std_Types.h"
-#include "IntCtrl_Cfg.h"
 /*******************************************************************
- * Global Constant Macros
+ *                 Global Data Types and Structures
+ * *****************************************************************/
+typedef s
+
+/*******************************************************************
+ *                     Global Constant Macros
+ * *****************************************************************/
+/*******************************************************************
+ * Cortex-M4 Peripheral Macros Definitions
+ * *****************************************************************/
+ #define CortexM4_Peri_Base_Address                0xE000E000
+ #define SCB_APINIT                           (*((volatile uint32 *)0xE000ED0C)) // Peripheral base address(0XE000E000) + offset address(0xD0C)
+#define SCB_INTCTRL                           (*((volatile uint32 *)0xE000ED04)) // Peripheral base address(0XE000E000) + offset address(0xD04)
+/*******************************************************************
+ *                       Global Functions Macros
  * *****************************************************************/
 
+
 /*******************************************************************
- * Global Functions Macros
+ *                           Global Data Prototypes
  * *****************************************************************/
 
-/*******************************************************************
- * Global Data Types and Structures
- * *****************************************************************/
+
+#endif /*  Mcu_Hw.h */
 
 /*******************************************************************
- * Global Data Prototypes
- * *****************************************************************/
-
-/*******************************************************************
- * Global Function Prototypes
- * *****************************************************************/
-
-/*******************************************************************
- *  \Syntax             : void IntCtrl_Init(void)
- *  \Description        : initialize Nvic\SCB Module by parsing the Configuration
- *                        into Nvic\SCB registers
- * 
- * \sync\Async          : Synchronous
- * \Reentrancy          : Non-Reentrant
- * *****************************************************************/
-void IntCtrl_Init(void);
-
-#endif /*IntCtrl.h*/
-
-/*******************************************************************
- *    // End of File : IntCtrl.h
+ *    // End of File : Mcu_Hw.h
  * *****************************************************************/
