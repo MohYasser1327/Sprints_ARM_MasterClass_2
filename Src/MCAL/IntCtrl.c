@@ -45,7 +45,7 @@
  * \Reentrancy          : Non-Reentrant
  * *****************************************************************/
 
-void IntCtrl_Init(void);
+void IntCtrl_Init(void)
 {
     /*Configure Grouping/Sub-Grouping System in APInit Register in SCB*/
 
